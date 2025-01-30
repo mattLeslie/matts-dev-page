@@ -28,10 +28,27 @@ const routeArray = [
 const scrollDirection = ref('');
 let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
 
+
+  const isAtViewportBoundary = (event: WheelEvent): boolean => {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+  if (event.deltaY > 0) {
+    // Scrolling down: only trigger routing if already at the bottom
+    return scrollTop + clientHeight >= scrollHeight;
+  } else {
+    // Scrolling up: only trigger routing if already at the top
+    return scrollTop <= 0;
+  }
+};
+
+
 // Detect mouse wheel movement
 const handleWheel = async (event: WheelEvent) => {
+  if (!isAtViewportBoundary(event)) {
+    return; // Allow normal scrolling within the viewport
+  }
 
-  if (scrollTimeout) return; // Prevent execution while waiting
+  event.preventDefault(); // Prevent default scrolling when triggering navigation
 
   scrollTimeout = setTimeout(() => {
     scrollTimeout = null; // Reset timeout to allow future scrolls
@@ -77,7 +94,7 @@ onMounted(() => {
   window.addEventListener('keydown', handleKeyPress); // Listen for keyboard events
   // Prevent scrolling when switching pages
   document.body.style.overflow = "hidden";
-  document.documentElement.style.overflow = "hidden"; // Ensure no scrolling at all
+  // document.documentElement.style.overflow = "hidden"; // Ensure no scrolling at all
 });
 
 onUnmounted(() => {

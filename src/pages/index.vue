@@ -8,8 +8,8 @@
         <img
           class="mb-4"
           style="border-radius: 50% !important;"
-          width="150"
-          height="150"
+          width="225"
+          height="225"
           src="@/assets/matt.jpeg"
         />
       </div>
