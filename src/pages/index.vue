@@ -73,6 +73,7 @@
 
 <script setup lang="ts">
   import stravaLogo from '@/assets/strava.svg'
+
   const tabs = [
     {
       title: 'About',

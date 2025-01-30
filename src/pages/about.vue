@@ -1,7 +1,8 @@
 <template>
-    <v-container height="100%">
-      <div
-        class="mr-auto"
+ 
+  <v-container class="fill-height">
+    <v-responsive
+        class="mx-auto"
         max-width="900"
       >
 
@@ -10,11 +11,19 @@
 
 
 
-    </div>
+    </v-responsive>
     </v-container>
+
   </template>
   
   
 <script lang="ts" setup>
-//
+
 </script>
+
+
+<style scoped>
+
+
+
+</style>
