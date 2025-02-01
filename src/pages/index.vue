@@ -22,7 +22,7 @@
       <div>
         <p>
           I'm a full stack software engineer building hydrology and climate related web applications. Right now, I support the USGS Web Informatics Team.
-          I'm excited to serve the American public and do my part to bring the Federal Government into the modern digital age. Please reach out! I'd love to chat about climate tech, renewable energy, maps, trail running, morel foraging, or anything that excites you.
+          Please reach out! I'd love to chat about climate tech, renewable energy, maps, trail running, morel foraging, or anything that excites you.
         </p>
       </div>
 

@@ -4,7 +4,7 @@
     <v-responsive class="mx-auto" max-width="900">
       <SectionHeader title="About"></SectionHeader>
       <div>
-        <v-card-text v-for="paragraph in copyText">
+        <v-card-text class="text-subtitle-1" v-for="paragraph in copyText">
 
           {{ paragraph }}
 
@@ -136,10 +136,6 @@ const education = ref([
     logo_img: usc,
     years: "2019 - 2023",
     location: "Los Angeles, CA",
-    lines: [
-
-
-    ]
   }
 ]);
 
